@@ -1,0 +1,400 @@
+/* registro.css - tema "Superhero" (colores, responsive) */
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #0b5fff;
+  --danger: #e53e3e;
+  --gold: #f5c259;
+  --input-bg: #0e1a2b;
+  --input-border: #1f2b3a;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --maxWidth: 760px;
+  --mobile-pad: 16px;
+  color-scheme: dark;
+}
+
+html,body,#app{
+  height:100%;
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg), #07101a);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.reg-wrap{
+  max-width: var(--maxWidth);
+  margin: 28px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.reg-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6), 0 1px 0 rgba(255,255,255,0.02) inset;
+  border: 1px solid rgba(255,255,255,0.04);
+  display:flex;
+  gap:18px;
+  align-items:stretch;
+}
+
+.reg-left{ flex:1; }
+
+.reg-brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:6px;
+}
+
+.reg-logo{
+  width:56px;height:56px;border-radius:10px;
+  background: linear-gradient(135deg,var(--accent),var(--gold));
+  display:flex;align-items:center;justify-content:center;font-weight:700;color:#07101a;
+  box-shadow:0 6px 18px rgba(11,95,255,0.12);
+  flex-shrink:0;
+}
+
+.reg-title{ font-size:20px;margin:0;padding:0;letter-spacing:0.2px; }
+.reg-sub{ margin:0;font-size:13px;color:var(--muted); }
+
+.reg-form{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:12px;
+  margin-top:8px;
+}
+
+.reg-field{ display:flex;flex-direction:column;gap:6px; }
+
+label.reg-label{ font-size:13px;color:var(--muted); }
+
+input.reg-input, select.reg-input {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  padding:10px 12px;
+  border-radius:8px;
+  color: #e6eef6;
+  outline: none;
+  font-size:14px;
+}
+input.reg-input:focus, select.reg-input:focus {
+  box-shadow: 0 4px 20px rgba(11,95,255,0.12);
+  border-color: var(--accent);
+}
+
+.reg-right{
+  width:320px;
+  min-width:220px;
+  max-width:360px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.reg-preview{
+  background: var(--glass);
+  border-radius:8px;
+  padding:12px;
+  min-height:120px;
+  color:var(--muted);
+  font-size:13px;
+  border:1px solid rgba(255,255,255,0.02);
+}
+
+.reg-actions{ display:flex; gap:10px; margin-top:12px; }
+
+button.btn{
+  padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.btn-primary{
+  background: linear-gradient(90deg,var(--accent), #4aa3ff);
+  color:#07101a;
+  box-shadow: 0 8px 20px rgba(11,95,255,0.14);
+  flex:1;
+}
+.btn-primary:active{ transform: translateY(1px); }
+
+.btn-ghost{
+  background: transparent;color:var(--muted);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding:10px 12px;border-radius:10px;
+}
+
+.small-muted{ font-size:12px;color:var(--muted);margin-top:8px; }
+
+/* Responsive: mobile */
+@media (max-width:880px){
+  .reg-card{ flex-direction:column;padding:14px; }
+  .reg-form{ grid-template-columns:1fr; }
+  .reg-right{ width:100%;max-width:100%; }
+  .reg-wrap{ padding:12px;margin:18px; }
+  .reg-brand .reg-title{ font-size:18px; }
+  .btn-primary{ padding:12px 14px; }
+}
+
+@media (max-width:420px){
+  .reg-card{ padding:12px; }
+  .reg-logo{ width:48px;height:48px;font-size:18px; }
+  input.reg-input{ padding:10px;border-radius:10px;font-size:14px; }
+}
+/* ===== FONDO HEROICO ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: radial-gradient(circle at center, #101020, #000008);
+  background-image: url('https://i.imgur.com/8bHqRKH.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* Fondo semitransparente para que siempre sea legible */
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+/* ===== TITULO ===== */
+.login-title {
+  font-size: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 #f00, -3px -3px 0 #00f;
+  margin-bottom: 20px;
+}
+
+/* ===== TARJETA ===== */
+.login-card {
+  background: rgba(0, 0, 0, 0.7);
+  width: 350px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 3px solid #ffdd00;
+  box-shadow: 0px 0px 25px #ffdd00;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== INPUTS ===== */
+.login-input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ffdd00;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-input::placeholder {
+  color: #bbb;
+}
+
+/* ===== BOTÓN ===== */
+.login-btn {
+  padding: 12px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff1f1f, #ffdd00);
+  color: #000;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px #ffdd00;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-title {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+/* ============================
+  Responsive definitivo para formularios (login + registro)
+  Pegar al final de registro.css
+  ============================ */
+
+/* Base general para formularios */
+.reg-wrap {
+  width: 100% !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+}
+
+/* Forzar tarjeta principal a usar flex (row en desktop) */
+.reg-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 16px !important;
+}
+
+/* Left (form) y right (preview/acciones) */
+.reg-left {
+  flex: 1 1 60% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.reg-right {
+  flex: 0 0 320px !important;
+  max-width: 360px !important;
+  min-width: 220px !important;
+  box-sizing: border-box !important;
+}
+
+/* Form layout: 2 columnas en desktop si aplica */
+.reg-form {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+  align-items: start !important;
+}
+
+/* Cada campo ocupa todo el ancho disponible */
+.reg-field { width: 100% !important; box-sizing: border-box !important; }
+
+/* Inputs */
+input.reg-input, select.reg-input, textarea.reg-input {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 10px 12px !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+}
+
+/* Preview text */
+.reg-preview {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  min-height: 84px !important;
+}
+
+/* Actions row */
+.reg-actions {
+  display: flex !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+/* Make action buttons reasonable size */
+.reg-actions .btn {
+  min-width: 110px !important;
+  padding: 10px 14px !important;
+}
+
+/* Small helper text */
+.small-muted {
+  font-size: 13px !important;
+  color: var(--muted) !important;
+}
+
+/* =========================
+   MEDIA QUERY <= 880px (tablet / mobile)
+   ========================= */
+@media (max-width: 880px) {
+
+  /* Stack card vertically */
+  .reg-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 12px !important;
+    gap: 12px !important;
+  }
+
+  /* Form becomes single column */
+  .reg-form {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Left on top, right below (full width) */
+  .reg-left { order: 1 !important; width: 100% !important; }
+  .reg-right { order: 2 !important; width: 100% !important; max-width: 100% !important; min-width: 0 !important; padding-top: 8px !important; }
+
+  /* Preview on top of actions and buttons expand */
+  .reg-preview { margin-bottom: 10px !important; min-height: 70px !important; }
+  .reg-actions { flex-direction: row !important; gap: 10px !important; }
+  .reg-actions .btn { flex: 1 1 auto !important; min-width: 0 !important; }
+
+  /* Make labels stack nicely */
+  .reg-field label.reg-label { display:block !important; margin-bottom:6px !important; }
+}
+
+/* =========================
+   MEDIA QUERY <= 420px (mobile small)
+   ========================= */
+@media (max-width: 420px) {
+
+  .reg-wrap { padding-left: 12px !important; padding-right: 12px !important; }
+
+  .reg-card {
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+
+  /* Inputs larger for touch */
+  input.reg-input, select.reg-input, textarea.reg-input {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+
+  /* Logo smaller to reduce vertical space */
+  .reg-logo { width: 48px !important; height: 48px !important; }
+
+  /* Actions stacked vertically for easy tapping */
+  .reg-actions { flex-direction: column !important; gap: 8px !important; }
+  .reg-actions .btn { width: 100% !important; min-width: 0 !important; }
+
+  .small-muted { font-size: 13px !important; }
+
+  /* Reduce preview min height on small screens */
+  .reg-preview { min-height: 56px !important; }
+}
+
+/* =========================
+   Accessibility & focus
+   ========================= */
+input.reg-input:focus, textarea.reg-input:focus, button:focus {
+  outline: 3px solid rgba(11,95,255,0.12) !important;
+  outline-offset: 2px !important;
+}
+
+/* If some inline styles still force layout, this final rule will try to override common inline flex-direction usage */
+[style*="flex-direction:row"] {
+  /* nothing active — this selector helps browsers re-calc — keep intentionally empty */
+}
