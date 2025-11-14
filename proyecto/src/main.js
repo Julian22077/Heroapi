@@ -8,10 +8,11 @@ import { onAuthStateChanged } from 'firebase/auth';
 onAuthStateChanged(auth, (user) => {
 if (user) {
 document.getElementById("menu").innerHTML = `
+<nav>
 <button id="menuHome">Home</button>
 <button id="menuOriginal">Original</button>
 <button id="menuLogout">Logout</button>
-
+</nav>
 `;
 document.getElementById("menuHome").addEventListener("click",
 mostrarHome);
@@ -22,7 +23,8 @@ mostrarLogout);
 mostrarHome()
 } else{
 
-
+ menu.style.display = "none";
+menu.innerHTML = "";
 
 mostrarLogin();
 }
